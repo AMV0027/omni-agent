@@ -1,33 +1,26 @@
 # Dependencies
 node_modules/
+/.pnp
+.pnp.js
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
-# Build output
-dist/
-build/
-*.tsbuildinfo
-
-# Environment files
+# Environment variables (CRITICAL - Never commit these)
 .env
 .env.local
 .env.*.local
+.env.production.local
 
 # Database
 *.db
+*.db-shm
+*.db-wal
 *.db-journal
 dev.db
 dev.db-journal
 prisma/dev.db
 prisma/*.db-journal
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # IDE
 .vscode/
@@ -36,12 +29,54 @@ yarn-error.log*
 *.swo
 *~
 .DS_Store
+*.sublime-project
+*.sublime-workspace
+.vs/
+
+# Build outputs
+/dist
+/build
+*.tsbuildinfo
+
+# Logs
+logs/
+**.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
 
 # Testing
 coverage/
 .nyc_output/
+.mocha_output/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Frontends
+ai-frontend/dist/
+ai-frontend/node_modules/
+ecom-frontend/dist/
+ecom-frontend/node_modules/
+
+# Prisma
+.prisma/client/
 
 # Misc
 .cache/
 temp/
 tmp/
+dump.rdb
